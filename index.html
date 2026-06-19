@@ -11,8 +11,8 @@
 <style>
   :root{
     --petrol:#003E52;
-    --petrol-deep:#002D3C;
-    --petrol-ink:#001F2B;
+    --petrol-deep:#003E52;
+    --petrol-ink:#003E52;
     --lime:#DAE343;
     --sky:#AEC7F9;
     --paper:#F5F8CE;
@@ -22,7 +22,7 @@
     --ink-soft:#2C5A6E;
     --line-light:rgba(0,62,82,.13);
     --line-dark:rgba(218,227,67,.15);
-    --maxw:1180px;     
+    --maxw:1180px;      
     }
 
   *{box-sizing:border-box;margin:0;padding:0}
@@ -106,7 +106,7 @@
   .hero::after{
     content:"";position:absolute;right:-6%;top:50%;transform:translateY(-50%);
     width:min(46vw,560px);height:min(46vw,560px);
-    background:radial-gradient(circle at 50% 50%,rgba(174,199,249,.12),transparent 62%);
+    background:radial-gradient(circle at 50% 50%,rgba(218,227,67,.20),transparent 62%);
     pointer-events:none;
   }
   .hero .wrap{position:relative;z-index:2}
@@ -210,7 +210,7 @@
     left:calc(-1 * clamp(36px,5vw,64px) + clamp(2px,1vw,9px));
     top:clamp(28px,3.4vw,40px);
     width:14px;height:14px;border-radius:50%;
-    background:var(--petrol-deep);border:2px solid var(--lime);
+    background:var(--lime);border:2px solid var(--lime);
     transform:scale(0);transition:transform .5s ease;
   }
   .phases.in-view .phase:nth-child(2)::before{transition-delay:.35s;transform:scale(1)}
@@ -226,7 +226,7 @@
     text-transform:uppercase;color:var(--sky);margin-top:.7em;
   }
   .phase h3{font-size:clamp(1.3rem,2.4vw,1.85rem);font-weight:800;letter-spacing:-.01em}
-  .phase p{margin-top:.7em;color:rgba(255,255,255,.82);max-width:52ch;font-size:1.02rem}
+  .phase p{margin-top:.7em;color:#ffffff;max-width:52ch;font-size:1.02rem}
   .phase .outcome{
     margin-top:1em;display:inline-flex;align-items:center;gap:.6em;
     font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.06em;
@@ -320,9 +320,9 @@
   .cta p{font-size:clamp(1.02rem,1.6vw,1.25rem);margin:1.1em 0 0;max-width:40ch;color:rgba(255,255,255,.82);font-weight:400}
   .cta-contacts .eyebrow{margin-bottom:1.5em}
   .contact-list{list-style:none;display:flex;flex-direction:column;gap:1.05em}
-  .contact-item{display:flex;align-items:center;gap:1em}
-  .contact-ico{width:44px;height:44px;flex:none;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--lime);background:rgba(174,199,249,.08);border:1px solid var(--line-dark)}
-  .contact-ico svg{width:21px;height:21px}
+  .contact-item{display:flex;align-items:center;gap:1em;min-height:44px}
+  .contact-ico{width:44px;height:44px;flex:none;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--petrol);background:rgba(0,62,82,.07);border:1.5px solid rgba(0,62,82,.22)}
+  .contact-ico svg{width:20px;height:20px;flex-shrink:0;display:block}
   .contact-txt{display:flex;flex-direction:column;line-height:1.2}
   .contact-k{font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
   .contact-v{font-size:1.04rem;color:var(--ink);text-decoration:none;margin-top:.35em}
