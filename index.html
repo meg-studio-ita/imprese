@@ -10,18 +10,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,800;0,900;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --petrol:#164458;
-    --petrol-deep:#0E2F3D;
-    --petrol-ink:#0A2530;
-    --lime:#C8E400;
-    --paper:#F3F4F0;
-    --paper-soft:#E9EBE4;
-    --ink:#12191C;
-    --ink-soft:#3C474B;
-    --line-light:rgba(18,25,28,.14);
-    --line-dark:rgba(243,244,240,.16);
+    --petrol:#003E52;
+    --petrol-deep:#002D3C;
+    --petrol-ink:#001F2B;
+    --lime:#DAE343;
+    --sky:#AEC7F9;
+    --paper:#F5F8CE;
+    --paper-soft:#EDF0B8;
+    --white:#FFFFFF;
+    --ink:#0D1F27;
+    --ink-soft:#3A4D55;
+    --line-light:rgba(0,62,82,.13);
+    --line-dark:rgba(218,227,67,.15);
     --maxw:1180px;
-  }
+    }
 
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -53,7 +55,7 @@
     background:currentColor;
     opacity:.5;
   }
-  .eyebrow.on-dark{color:rgba(243,244,240,.62)}
+  .eyebrow.on-dark{color:var(--sky)}
   .eyebrow.lime{color:var(--lime)}
   .eyebrow.lime::before{background:var(--lime);opacity:1}
 
@@ -72,7 +74,7 @@
   /* ---- nav ---- */
   .nav{
     position:sticky;top:0;z-index:50;
-    background:rgba(22,68,88,.92);
+    background:rgba(0,62,82,.94);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line-dark);
   }
@@ -102,7 +104,7 @@
   .hero::after{
     content:"";position:absolute;right:-6%;top:50%;transform:translateY(-50%);
     width:min(46vw,560px);height:min(46vw,560px);
-    background:radial-gradient(circle at 50% 50%,rgba(200,228,0,.16),transparent 62%);
+    background:radial-gradient(circle at 50% 50%,rgba(174,199,249,.12),transparent 62%);
     pointer-events:none;
   }
   .hero .wrap{position:relative;z-index:2}
@@ -114,11 +116,11 @@
   .hero-tagline{
     font-size:clamp(1.2rem,2.4vw,1.85rem);
     font-weight:500;letter-spacing:-.01em;line-height:1.2;
-    color:rgba(243,244,240,.9);max-width:28ch;margin:.85em 0 0;
+    color:rgba(255,255,255,.92);max-width:28ch;margin:.85em 0 0;
   }
   .hero .lead{
     font-size:clamp(1rem,1.5vw,1.2rem);
-    color:rgba(243,244,240,.66);
+    color:rgba(255,255,255,.70);
     max-width:50ch;margin:1.5em 0 0;font-weight:400;
   }
   .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:2.4em}
@@ -143,7 +145,7 @@
   }
   .hero-meta div{background:var(--petrol);padding:1.3em 1.4em}
   .hero-meta .k{font-family:'IBM Plex Mono',monospace;color:var(--lime);font-size:.78rem;letter-spacing:.05em;font-weight:600}
-  .hero-meta .v{margin-top:.5em;font-size:.92rem;color:rgba(243,244,240,.74);line-height:1.4}
+  .hero-meta .v{margin-top:.5em;font-size:.92rem;color:rgba(255,255,255,.78);line-height:1.4}
 
   /* ---- proof band ---- */
   .proof{background:var(--petrol-ink);color:var(--paper)}
@@ -156,7 +158,7 @@
   .proof-num span{font-size:.42em;vertical-align:super;margin-left:.04em}
   .proof-text .eyebrow{margin-bottom:1em}
   .proof-lead{font-size:clamp(1.4rem,2.6vw,2.1rem);font-weight:800;letter-spacing:-.01em;max-width:22ch;line-height:1.12}
-  .proof-sub{margin-top:.9em;color:rgba(243,244,240,.72);font-size:1.05rem;max-width:42ch}
+  .proof-sub{margin-top:.9em;color:rgba(255,255,255,.75);font-size:1.05rem;max-width:42ch}
 
   /* ---- standoff: posta in gioco vs risposta ---- */
   .standoff{background:var(--paper)}
@@ -169,7 +171,7 @@
   .so-num{font-size:clamp(4.4rem,10.5vw,7.6rem);font-weight:900;color:var(--lime);line-height:.82;letter-spacing:-.045em;margin-top:.45em}
   .so-num span{font-size:.42em;vertical-align:super;margin-left:.03em}
   .so-lead{font-size:clamp(1.3rem,2.1vw,1.75rem);font-weight:800;letter-spacing:-.01em;margin-top:.45em;max-width:22ch;line-height:1.15}
-  .so-sub{margin-top:1em;color:rgba(243,244,240,.74);font-size:1.02rem;max-width:36ch}
+  .so-sub{margin-top:1em;color:rgba(255,255,255,.78);font-size:1.02rem;max-width:36ch}
 
   /* ---- scenario ---- */
   .scenario h2{font-size:clamp(1.7rem,3.6vw,2.9rem);max-width:20ch;margin-top:.4em}
@@ -219,10 +221,10 @@
   }
   .phase-label{
     font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.18em;
-    text-transform:uppercase;color:rgba(243,244,240,.55);margin-top:.7em;
+    text-transform:uppercase;color:var(--sky);margin-top:.7em;
   }
   .phase h3{font-size:clamp(1.3rem,2.4vw,1.85rem);font-weight:800;letter-spacing:-.01em}
-  .phase p{margin-top:.7em;color:rgba(243,244,240,.78);max-width:52ch;font-size:1.02rem}
+  .phase p{margin-top:.7em;color:rgba(255,255,255,.82);max-width:52ch;font-size:1.02rem}
   .phase .outcome{
     margin-top:1em;display:inline-flex;align-items:center;gap:.6em;
     font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.06em;
@@ -240,16 +242,16 @@
   .founder img{width:clamp(120px,13vw,158px);height:clamp(120px,13vw,158px);border-radius:50%;object-fit:cover;background:var(--paper-soft);filter:grayscale(1)}
   .founder figcaption{display:flex;flex-direction:column;line-height:1.3}
   .founder figcaption b{font-size:1.04rem;font-weight:700}
-  .founder figcaption span{font-family:'IBM Plex Mono',monospace;font-size:.73rem;letter-spacing:.06em;color:rgba(243,244,240,.6);margin-top:.4em}
-  .about-body{color:rgba(243,244,240,.82);font-size:1.06rem;max-width:46ch}
+  .founder figcaption span{font-family:'IBM Plex Mono',monospace;font-size:.73rem;letter-spacing:.06em;color:rgba(255,255,255,.65);margin-top:.4em}
+  .about-body{color:rgba(255,255,255,.85);font-size:1.06rem;max-width:46ch}
   .about-body b{color:var(--paper);font-weight:600}
   .about-body + .about-body{margin-top:1em}
-  .about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:clamp(26px,3.5vw,38px);background:var(--line-dark);border:1px solid var(--line-dark)}
+  .about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:clamp(26px,3.5vw,38px);background:var(--line-dark);border:1px solid rgba(174,199,249,.28)}
   .stat{background:var(--petrol);padding:1.3em 1.4em}
   .stat-n{font-size:clamp(2.3rem,4.4vw,3.3rem);font-weight:900;color:var(--lime);line-height:.9;letter-spacing:-.03em}
   .stat-n span{font-size:.5em;vertical-align:super;margin-left:.02em}
-  .stat-l{margin-top:.65em;font-size:.84rem;color:rgba(243,244,240,.7);line-height:1.35}
-  .about-tags{margin-top:1.5em;font-family:'IBM Plex Mono',monospace;font-size:.73rem;letter-spacing:.05em;color:rgba(243,244,240,.55);line-height:1.9}
+  .stat-l{margin-top:.65em;font-size:.84rem;color:rgba(255,255,255,.72);line-height:1.35}
+  .about-tags{margin-top:1.5em;font-family:'IBM Plex Mono',monospace;font-size:.73rem;letter-spacing:.05em;color:var(--sky);line-height:1.9}
 
   /* ---- value ---- */
   .value h2{font-size:clamp(1.7rem,3.6vw,2.9rem);max-width:18ch;margin-top:.4em}
@@ -258,8 +260,8 @@
     margin-top:clamp(36px,5vw,56px);background:var(--line-light);
     border:1px solid var(--line-light);
   }
-  .value-card{background:var(--paper);padding:clamp(28px,3.2vw,42px)}
-  .value-card .n{font-family:'IBM Plex Mono',monospace;color:var(--ink-soft);font-size:.78rem;letter-spacing:.1em}
+  .value-card{background:var(--white);padding:clamp(28px,3.2vw,42px)}
+  .value-card .n{font-family:'IBM Plex Mono',monospace;color:var(--petrol);font-size:.78rem;letter-spacing:.1em}
   .value-card h3{font-size:clamp(1.2rem,2vw,1.55rem);font-weight:800;margin-top:1em;letter-spacing:-.01em}
   .value-card h3 b{color:var(--petrol);font-weight:900}
   .value-card p{color:var(--ink-soft);margin-top:.6em;font-size:1rem;max-width:38ch}
@@ -270,7 +272,7 @@
   .ref h2{font-size:clamp(1.7rem,3.6vw,2.9rem);max-width:16ch;margin-top:.4em}
   .ref .note{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--ink-soft);letter-spacing:.08em;max-width:30ch}
   .ref-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.6vw,20px);margin-top:clamp(36px,5vw,56px)}
-  .ref-card{background:var(--paper);border:1px solid var(--line-light);overflow:hidden;display:flex;flex-direction:column}
+  .ref-card{background:var(--white);border:1px solid var(--line-light);overflow:hidden;display:flex;flex-direction:column}
   .ref-img{
     aspect-ratio:4/3;background-color:var(--petrol-deep);
     background-size:cover;background-position:center;background-repeat:no-repeat;
@@ -294,7 +296,7 @@
   .studio{background:var(--petrol)}
   .studio .wrap{display:grid;grid-template-columns:auto 1fr;gap:clamp(28px,5vw,72px);align-items:center}
   .studio .eyebrow{margin-bottom:1em}
-  .studio p{color:rgba(243,244,240,.82);font-size:clamp(1.05rem,1.7vw,1.3rem);max-width:54ch;font-weight:400}
+  .studio p{color:rgba(255,255,255,.85);font-size:clamp(1.05rem,1.7vw,1.3rem);max-width:54ch;font-weight:400}
   .studio p b{color:var(--paper);font-weight:600}
   .studio .badge{
     font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--lime);
@@ -308,19 +310,19 @@
   .cta h2{font-size:clamp(1.9rem,4.2vw,3.2rem);max-width:15ch}
   .cta-accent{color:var(--paper);font-style:italic}
   .cta-rule{display:block;width:54px;height:4px;background:var(--lime);margin:0 0 1.5em}
-  .cta p{font-size:clamp(1.02rem,1.6vw,1.25rem);margin:1.1em 0 0;max-width:40ch;color:rgba(243,244,240,.78);font-weight:400}
+  .cta p{font-size:clamp(1.02rem,1.6vw,1.25rem);margin:1.1em 0 0;max-width:40ch;color:rgba(255,255,255,.82);font-weight:400}
   .cta-contacts .eyebrow{margin-bottom:1.5em}
   .contact-list{list-style:none;display:flex;flex-direction:column;gap:1.05em}
   .contact-item{display:flex;align-items:center;gap:1em}
-  .contact-ico{width:44px;height:44px;flex:none;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--lime);background:rgba(243,244,240,.045);border:1px solid var(--line-dark)}
+  .contact-ico{width:44px;height:44px;flex:none;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--lime);background:rgba(174,199,249,.08);border:1px solid var(--line-dark)}
   .contact-ico svg{width:21px;height:21px}
   .contact-txt{display:flex;flex-direction:column;line-height:1.2}
-  .contact-k{font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,244,240,.5)}
+  .contact-k{font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sky)}
   .contact-v{font-size:1.04rem;color:var(--paper);text-decoration:none;margin-top:.35em}
   a.contact-v:hover{color:var(--lime)}
 
   /* ---- footer ---- */
-  footer{background:var(--petrol-ink);color:rgba(243,244,240,.62);padding:48px 0}
+  footer{background:var(--petrol-ink);color:rgba(255,255,255,.62);padding:48px 0}
   footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:start}
   footer .brand{color:var(--paper);font-size:1rem}
   footer .meta{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.06em;line-height:1.9;text-align:right}
